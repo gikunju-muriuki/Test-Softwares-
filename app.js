@@ -271,7 +271,7 @@ function renderProjectPageContent() {
                 <span class="expand-indicator" id="expandIcon">▼</span>
             </div>
             <p style="color: var(--muted-text); font-size: 0.95rem; margin: 0.5rem 0 1.2rem 0;">
-                High-frequency parameter validation environments. Click this block frame layout to reveal deeper structural contract specs.
+                Click here to reveal deeper contract specs.
             </p>
             <div class="project-grid">
                 <div class="profile-stat-row" style="border: none; background: var(--bg-color); padding: 0.5rem; border-left: 3px solid var(--text-color);">
@@ -282,7 +282,7 @@ function renderProjectPageContent() {
                 </div>
                 <div class="profile-stat-row" style="border: none; background: var(--bg-color); padding: 0.5rem; border-left: 3px solid var(--accent-green);">
                     <div style="display:flex; flex-direction:column;">
-                        <span class="profile-stat-label" style="font-size:0.8rem; color: var(--accent-green); font-weight: 700;">ACTIVE TESTERS ONLINE</span>
+                        <span class="profile-stat-label" style="font-size:0.8rem; color: var(--accent-green); font-weight: 700;">TESTERS ONLINE</span>
                         <span class="profile-stat-value" style="font-size: 1.3rem; color: var(--accent-green);" id="liveActiveCounter">${currentActiveTesters}</span>
                     </div>
                 </div>
@@ -308,10 +308,10 @@ function renderProjectPageContent() {
             </div>
         </div>
 
-        <div class="project-section-title">Archived Past Assignments</div>
+        <div class="project-section-title">Recent Projects</div>
         <div class="project-card">
-            <h3>Project Quantum-Core Alpha</h3>
-            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 0.3rem;">Legacy baseline validation systems array pipeline sequences.</p>
+            <h3>Project Quantum-Core Inc</h3>
+            <p style="color: var(--muted-text); font-size: 0.9rem; margin-top: 0.3rem;">Baseline validation systems</p>
         </div>
     `;
 
