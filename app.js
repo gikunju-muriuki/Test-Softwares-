@@ -140,7 +140,7 @@ function renderList() {
         managersList.appendChild(li);
     });
 
-    searchStats.textContent = `Showing ${filtered.length} of top 500 managers matches`;
+    searchStats.textContent = `Showing ${filtered.length} of top 500 matches`;
     noResults.style.display = filtered.length === 0 ? 'block' : 'none';
 }
 
