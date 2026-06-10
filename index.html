@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test software - Managers Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="dashboardView">
+        <header>
+            <div class="logo">Test software</div>
+            <nav class="nav-links">
+                <a href="#">Overview</a>
+                <a href="#">Analytics</a>
+                <a href="#" class="active-nav">Managers</a>
+                <button id="themeToggleBtn" class="theme-toggle">🌓 Toggle Mode</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <h1>Manager Directory</h1>
+                <p>Enterprise performance analytics and engineering roster mapping.</p>
+            </section>
+
+            <section class="controls-container">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search name..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="filter-box">
+                    <select id="deptFilter" class="filter-select">
+                        <option value="">All Departments</option>
+                    </select>
+                    <select id="rankFilter" class="filter-select">
+                        <option value="">All Ranks</option>
+                    </select>
+                </div>
+                <div class="action-box">
+                    <button id="exportCsvBtn" class="action-btn">📥 Export Filtered Roster</button>
+                </div>
+                <div class="search-stats" id="searchStats">Loading roster...</div>
+            </section>
+
+            <ul class="managers-list" id="managersList"></ul>
+
+            <div class="no-results" id="noResults">
+                No profiles match your specific query filters.
+            </div>
+        </main>
+    </div>
+
+    <div id="projectPageView" class="project-page">
+        <button class="back-btn" id="backToDashboardBtn">← Back to Dashboard</button>
+        <div id="projectPageContent"></div>
+    </div>
+
+    <div class="modal-overlay" id="profileModal">
+        <div class="modal-card">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            
+            <div id="modalLoader" class="loader-container">
+                <div class="spinner"></div>
+                <p id="loaderMessage">Retrieving corporate telemetry...</p>
+            </div>
+
+            <div id="modalContent" class="profile-content" style="display: none;">
+                <h2 id="profName">Manager Name</h2>
+                <span class="profile-rank" id="profRank">Senior Director</span>
+                
+                <div class="profile-stat-row">
+                    <span class="profile-stat-label">Department</span>
+                    <span class="profile-stat-value" id="profDept">Global QA Operations</span>
+                </div>
+                <div class="profile-stat-row">
+                    <span class="profile-stat-label">Projects Managed</span>
+                    <span class="profile-stat-value" id="profProjectsCount">0</span>
+                </div>
+                <div class="profile-stat-row vertical">
+                    <div class="stat-header-split">
+                        <span class="profile-stat-label">Success Delivery Rate</span>
+                        <span class="profile-stat-value" id="profRate">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="profRateBar" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="profile-stat-row">
+                    <span class="profile-stat-label">Corporate Tenure</span>
+                    <span class="profile-stat-value" id="profTenure">0 Years</span>
+                </div>
+
+                <div class="ref-input-container">
+                    <label for="refNumberInput">Internal Security Reference Verification</label>
+                    <input type="text" id="refNumberInput" class="ref-input" placeholder="Type token & press Enter...">
+                    <div id="refError" class="ref-error">Access Denied: Invalid Security Token.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
